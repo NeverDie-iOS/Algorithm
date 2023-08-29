@@ -1,7 +1,6 @@
 import Foundation
 
 func solution(_ cipher:String, _ code:Int) -> String {
-    var arr = cipher.map{String($0)}
     var result = ""
     var count = 1
     for char in cipher {
