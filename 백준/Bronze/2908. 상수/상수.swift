@@ -1,0 +1,1 @@
+print(readLine()!.split(separator: " ").map{Int(String(String($0).reversed()))!}.max()!)
