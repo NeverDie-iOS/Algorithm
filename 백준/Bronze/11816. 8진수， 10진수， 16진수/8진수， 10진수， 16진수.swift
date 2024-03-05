@@ -1,10 +1,9 @@
-var x = readLine()!
+let input = readLine()!.map{String($0)}
 
-if x.hasPrefix("0x") {
-    x.removeFirst(2)
-    print(Int(x, radix: 16)!)
-} else if x.hasPrefix("0") {
-    print(Int(x, radix: 8)!)
+if input[1] == "x" {
+    print(Int(input[2...].joined(),radix: 16)!)
+} else if input[0] == "0" {
+    print(Int(input[1...].joined(),radix: 8)!)
 } else {
-    print(x)
+    print(Int(input.joined())!)
 }
