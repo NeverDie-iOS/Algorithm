@@ -1,9 +1,18 @@
 let n = Int(readLine()!)!
 var result = 0
+
 for i in 1...n {
-    let arr = String(i).map{String($0)}.map{Int($0)!}
-    if i % arr.reduce(0,+) == 0 {
+    var temp = i
+    var sum = 0
+    
+    while(temp != 0) {
+        sum += temp % 10
+        temp /= 10
+    }
+    
+    if i % sum == 0 {
         result += 1
     }
+    
 }
 print(result)
